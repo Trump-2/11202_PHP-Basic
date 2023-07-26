@@ -3,7 +3,6 @@
 date_default_timezone_set('Asia/Taipei');
 
 echo date("Y-m-d H:i:s");
-
 ?>
 <h2>strtotime</h2>
 <?php
@@ -12,6 +11,11 @@ echo date("Y-m-d H:i:s");
 // echo "<br>";
 // echo strtotime("+1 month", strtotime("2023-01-01"));
 // echo "<br>";
+// echo strtotime(date("Y"));
+// echo "<br>";
+// echo strtotime(date("Y-m-d"));
+// echo "<br><hr>";
+  
 echo strtotime("now");
 $time = strtotime("now");
 echo "<br>";
@@ -45,9 +49,9 @@ if ($EachYearBirthDateTimestamp > $todayTimestamp) {
 }
 
 echo "距離下一次生日：" . date("Y-m-d", $EachYearBirthDateTimestamp) . " 還有 " . ceil($days) . " 天";
+  
 ?>
 
-<h2>利用date()函式的格式化參數，完成以下的日期格式呈現</h2>
 
 <ul>
   <li>2021/10/05</li>
@@ -57,37 +61,37 @@ echo "距離下一次生日：" . date("Y-m-d", $EachYearBirthDateTimestamp) . "
   <li>今天是西元2021年10月5日 上班日(或假日)</li>
 </ul>
 <?php
-echo date("Y/m/d");
-echo "<br>";
-echo date("m月d日 l");
-echo "<br>";
-echo date("Y-m-d H:i:s");
-echo "<br>";
-echo date("Y-n-j G:i:s");
+  echo date("Y/m/d");
+  echo "<br>";
+  echo date("m月d日 l");
+  echo "<br>";
+  echo date("Y-m-d H:i:s");
+  echo "<br>";
+  echo date("Y-n-j G:i:s");
 echo "<br>";
 
 
-
+  
 echo date("今天是西元Y年m月d日");
-
-if (date("N") <= 5) {
-  echo "上班日";
-} else {
-  echo "假日";
-}
+  
+if   (date("N") <= 5) {
+    echo "上班日";
+}   else {
+    echo "假日";
+  }
+  
 ?>
-
 <h2>利用迴圈來計算連續五個周一的日期</h2>
 例:
-<ul>
+<u l>
   <li>2021-10-04 星期一</li>
   <li>2021-10-11 星期一</li>
   <li>2021-10-18 星期一</li>
   <li>2021-10-25 星期一</li>
   <li>2021-11-01 星期一</li>
-</ul>
 
-<?php
+
+  <?php
 // $todayWeek = date("N");
 // $diff = 1 - $todayWeek;
 // $lastMonday = strtotime("$diff days");
