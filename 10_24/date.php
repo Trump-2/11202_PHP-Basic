@@ -7,7 +7,11 @@ echo date("Y-m-d H:i:s");
 ?>
 <h2>strtotime</h2>
 <?php
-
+// strtotime 第一個參數是字串 ( 可以是日期格式或者是 +-1 day / month / year 的格式 )，第二個參數是秒數
+// echo strtotime("2023-01-01");
+// echo "<br>";
+// echo strtotime("+1 month", strtotime("2023-01-01"));
+// echo "<br>";
 echo strtotime("now");
 $time = strtotime("now");
 echo "<br>";
