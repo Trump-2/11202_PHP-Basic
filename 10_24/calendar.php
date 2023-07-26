@@ -57,18 +57,18 @@
     for ($j = 0; $j < 7; $j++) {
       // 從每月第一周的第一天開始每天遞增 1，從加 0 開始
       $addDays = 7 * $i + $j;
-      // 從每月第一周的第一天的那格開始，算出每格的日期
-      $thisCellDate = date("Y-m-d", strtotime("+$addDays days", strtotime($firstCellDate)));
+      // 從每月第一周的第一天的那格開始，算出每格的秒數
+      $thisCellDate = strtotime("+$addDays days", strtotime($firstCellDate));
       // 判斷格子中的日期是星期幾，0代表星期日(依此類推)，因為這裡要讓假日的 background-color 改變，也就是星期為 0 或 6 的，所以將其作為判斷條件
-      if(date('w', strtotime($thisCellDate)) == 0 ||date('w', strtotime($thisCellDate)) == 6) {
+      if(date('w', $thisCellDate) == 0 ||date('w', $thisCellDate)== 6) {
         echo "<td style='background-color:lightgreen'>";
       }
       else {
       echo "<td>";
       }
       // 判斷格子中的日期的月份是否為每月 1 號代表的日期格式裡的月份相等，因為這裡要將不是該月份的日期不顯示出來
-      if (date("m",strtotime($thisCellDate)) == date('m', strtotime($thisFirstDay))) {
-        echo $thisCellDate;
+      if (date("m",$thisCellDate) == date('m', strtotime($thisFirstDay))) {
+        echo date("j",$thisCellDate);
       }
       echo "</td>";
     }
