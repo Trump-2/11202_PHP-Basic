@@ -1,30 +1,31 @@
 <?php
 
-$score=55;
-$score+=20;
-echo "我的成績：".$score;
+$score = 55;
+$score += 20;
+echo "我的成績：" . $score;
 echo "<br>";
+
 echo "判斷為：";
-if($score >= 90) {
+if ($score >= 90) {
   echo "great";
 } else if ($score >= 80) {
   echo "good";
 } else if ($score >= 70) {
   echo "normal";
-}
-  else if ($score < 60){
+} else if ($score < 60) {
   echo "bad";
 }
 echo "<br>";
 echo "<br>";
 // echo "<hr>";
-$number=55;
-echo "數字：".$number;
+$number = 55;
+echo "數字：" . $number;
 echo "<br>";
+
 echo "判斷為：";
-if($number % 2 == 0)
+if ($number % 2 == 0)
   echo "偶數";
-else 
+else
   echo "奇數";
 // 為甚麼印不出來
 echo false;
@@ -32,25 +33,26 @@ echo false;
 echo "<br>";
 echo "<br>";
 
-$day = "二";
-echo "星期：".$day;
+$day = "日";
+echo "星期：" . $day;
 echo "<br>";
-switch($day) {
+
+switch ($day) {
   case "一":
     echo "資料庫";
     break;
   case "二":
     echo "視覺影像";
-  break;
+    break;
   case "三":
     echo "網頁編輯";
-  break;
+    break;
   case "四":
     echo "網頁動態";
-  break;
+    break;
   case "五":
     echo "資訊網路";
-  break;
+    break;
   default:
     echo "放假";
 }
@@ -58,7 +60,7 @@ echo "<br>";
 echo "<br>";
 
 $score2 = 70;
-echo "成績：".$score2;
+echo "成績：" . $score2;
 echo "<br>";
 
 switch (true) {
