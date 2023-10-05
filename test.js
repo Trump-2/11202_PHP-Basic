@@ -1,7 +1,12 @@
-'use strict';
+"use strict";
 
-let age = 10;
-
-const calcAge = function() {
-  console.log(age)
+const scoreArr = [70, 89, 77];
+for (const [i, el] of scoreArr.entries()) {
+  console.log(`${i + 1} : ${el}`);
 }
+
+console.log([...scoreArr.entries()]);
+
+scoreArr.forEach(function (el, i, arr) {
+  console.log(`${i + 1} : ${el}`);
+});
