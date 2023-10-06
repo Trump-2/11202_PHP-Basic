@@ -75,7 +75,7 @@ for ($j = 3; $j <= $n; $j++) {
     }
   }
   if ($flag === true)
-    echo "$j,";
+    echo "$j, ";
 }
 echo "<br>";
 echo "一共執行了" . $count . "次的程式內容";
