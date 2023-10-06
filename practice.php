@@ -15,7 +15,24 @@ echo "<hr>";
 //   echo "閏年";
 
 if ($year % 4 === 0) {
-  echo "$year 是閏年";
+  if ($year % 100 !== 0) {
+    echo "是閏年";
+  } else {
+    if ($year % 400 === 0) {
+      echo "是閏年";
+    } else {
+      echo "是平年";
+    }
+  }
 } else {
-  echo "$year 是平年";
+  echo "是平年";
+}
+
+
+// 簡化巢狀
+
+if ($year % 4 === 0 && $year % 100 !== 0 ||  $year % 400 === 0) {
+  echo "是閏年";
+} else {
+  echo "是平年";
 }
