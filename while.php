@@ -22,11 +22,12 @@ while ($i <= 100) {
   // echo $sum + $i;
   // echo "<br>";
 
-  echo '當$i = 1 時, $sum + $i 的結果為：';
-  echo "$sum" . "+" . $i . "=";
+  echo '當$i = ' . "$i 時," . '$sum + $i 的結果為：';
+  echo "$sum + $i = " . ($sum += $i);
+  echo "<br>";
 
   // 將目前的數字加到總和中
-  $sum += $i;
+  // $sum += $i;
 
   // 增加計數器
   $i++;
