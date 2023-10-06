@@ -79,3 +79,30 @@ for ($j = 3; $j <= $n; $j++) {
 }
 echo "<br>";
 echo "一共執行了" . $count . "次的程式內容";
+
+?>
+<h3>陣列</h3>
+<?php
+
+$scores = ['甲', "乙", "丙", "丁"];
+
+for ($i = 0; $i < count($scores); $i++) {
+  echo $scores[$i];
+  echo "<br>";
+}
+echo "<br>";
+
+// $s = $scores[0];
+// $s = $scores[1];
+// $s = $scores[2];
+// ...
+// ...
+foreach ($scores as $s) {
+  echo $s;
+}
+echo "<br>";
+
+foreach ($scores as $k => $v) {
+  echo "$k : $v";
+  echo "<br>";
+}
