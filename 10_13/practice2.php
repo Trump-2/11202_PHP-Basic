@@ -31,10 +31,10 @@ echo "</table>";
 
 echo "<hr>";
 
-// echo "<table>";
+// 九九乘法表-有表頭 ( 比較笨的版本 )
 echo "<table>";
 echo "<tr>";
-echo "<td>乘數</td>";
+echo "<td></td>";
 echo "<td>1</td>";
 echo "<td>2</td>";
 echo "<td>3</td>";
@@ -58,7 +58,35 @@ for ($j = 1; $j <= 9; $j++) {
 }
 echo "</tr>";
 echo "</table>";
-// echo "</table>";
+echo "<hr>";
+
+// 九九乘法表-有表頭 ( 簡化版 )
+
+echo "<table>";
+for ($j = 0; $j <= 9; $j++) {
+  if ($j === 0) {
+    "<tr style='background:#eee'>";
+  } else {
+    echo "<tr>";
+  }
+  echo "<tr>";
+  for ($i = 0; $i <= 9; $i++) {
+    echo "<td>";
+    if ($j === 0 && $i === 0) {
+      echo "";
+    } else if ($j === 0) {
+      echo $i;
+    } else if ($i === 0) {
+      echo $j;
+    } else {
+      echo $j * $i;
+    }
+    echo "</td>";
+  }
+  echo "<tr>";
+}
+echo "</table>";
+
 ?>
 
 
