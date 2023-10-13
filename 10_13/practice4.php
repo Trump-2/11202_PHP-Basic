@@ -113,8 +113,10 @@ for ($i = 0; $i < 7; $i++) {
     if ($i === 0 || $i === 6) {
       echo "*";
     } else {
-      if ($j === 0 || $j === 6 || $i === $j || $i === 6 - $j) {
+      if ($j === 0 || $j === 6) {
         echo "*";
+      } else if ($i === $j || $i === 6 - $j) {
+        echo "<span style='color:red'>*</span>";
       } else {
         echo "&nbsp;";
       }
