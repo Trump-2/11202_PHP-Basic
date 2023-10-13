@@ -2,14 +2,16 @@
 <?php
 
 // 直角三角形
-echo "* <br>";
-echo "** <br>";
-echo "*** <br>";
-echo "**** <br>";
-echo "***** <br>";
-echo "<hr>";
+// echo "* <br>";
+// echo "** <br>";
+// echo "*** <br>";
+// echo "**** <br>";
+// echo "***** <br>";
+// echo "<hr>";
 
-for ($i = 0; $i < 5; $i++) {
+$amount = 10;
+
+for ($i = 0; $i < $amount; $i++) {
   for ($j = 0; $j <= $i; $j++) {
     echo "*";
   }
@@ -104,7 +106,7 @@ for ($i = 0; $i < 7; $i++) {
 }
 ?>
 
-<h2>矩形 2 變化型</h2>
+<h2>矩形對角線加 CSS</h2>
 <?php
 for ($i = 0; $i < 7; $i++) {
   # code...
@@ -120,6 +122,24 @@ for ($i = 0; $i < 7; $i++) {
       } else {
         echo "&nbsp;";
       }
+    }
+  }
+  echo "<br>";
+}
+?>
+
+<h2>矩形加對角線</h2>
+<?php
+
+for ($i = 0; $i < 7; $i++) {
+
+  for ($j = 0; $j < 7; $j++) {
+    if ($i == 0 || $i == 6) {
+      echo "*";
+    } else if ($j == 0 || $j == 6 || $j == $i || $i + $j == 6) {
+      echo "*";
+    } else {
+      echo "&nbsp;";
     }
   }
   echo "<br>";
