@@ -36,7 +36,8 @@ echo "<br>";
 
 <style>
   * {
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 0.5;
   }
 </style>
 <?php
@@ -93,6 +94,26 @@ for ($i = 0; $i < 7; $i++) {
       echo "*";
     } else {
       if ($j === 0 || $j === 6) {
+        echo "*";
+      } else {
+        echo "&nbsp;";
+      }
+    }
+  }
+  echo "<br>";
+}
+?>
+
+<h2>矩形 2 變化型</h2>
+<?php
+for ($i = 0; $i < 7; $i++) {
+  # code...
+  for ($j = 0; $j < 7; $j++) {
+    # code...
+    if ($i === 0 || $i === 6) {
+      echo "*";
+    } else {
+      if ($j === 0 || $j === 6 || $i === $j || $i === 6 - $j) {
         echo "*";
       } else {
         echo "&nbsp;";
