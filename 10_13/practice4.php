@@ -26,6 +26,27 @@ for ($i = 4; $i >= 0; $i--) {
 echo "<br>";
 
 // 正三角形
-// for ($i=0; $i < ; $i++) { 
-//   # code...
-// }
+echo "&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;<br>";
+echo "&nbsp;&nbsp;&nbsp;***&nbsp;&nbsp;&nbsp;<br>";
+echo "&nbsp;&nbsp;*****&nbsp;&nbsp;<br>";
+echo "&nbsp;*******&nbsp;<br>";
+echo "*********<br>";
+echo "<br>";
+?>
+
+<style>
+  * {
+    font-family: 'Courier New', Courier, monospace
+  }
+</style>
+<?php
+for ($i = 0; $i < 5; $i++) {
+  for ($j = 0; $j < (4 - $i); $j++) {
+    echo "&nbsp";
+  }
+  for ($k = 0; $k < (2 * $i + 1); $k++) {
+    echo "*";
+  }
+  echo "<br>";
+}
+?>
