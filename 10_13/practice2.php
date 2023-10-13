@@ -1,13 +1,18 @@
 <style>
-  table,
-  td {
-    border: 1px solid orange;
+table,
+td {
+  border: 1px solid orange;
 
-  }
+}
 
-  table {
-    border-collapse: collapse;
-  }
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td {
+  padding: 3px 9px;
+}
 </style>
 <h2>九九乘法表</h2>
 
@@ -23,6 +28,37 @@ for ($j = 1; $j <= 9; $j++) {
   echo "</tr>";
 }
 echo "</table>";
+
+echo "<hr>";
+
+// echo "<table>";
+echo "<table>";
+echo "<tr>";
+echo "<td>乘數</td>";
+echo "<td>1</td>";
+echo "<td>2</td>";
+echo "<td>3</td>";
+echo "<td>4</td>";
+echo "<td>5</td>";
+echo "<td>6</td>";
+echo "<td>7</td>";
+echo "<td>8</td>";
+echo "<td>9</td>";
+for ($j = 1; $j <= 9; $j++) {
+  echo "<tr>";
+  echo "<td>";
+  echo $j;
+  echo "</td>";
+  for ($i = 1; $i <= 9; $i++) {
+    echo "<td>";
+    echo $i * $j;
+    echo "</td>";
+  }
+  echo "<tr>";
+}
+echo "</tr>";
+echo "</table>";
+// echo "</table>";
 ?>
 
 
