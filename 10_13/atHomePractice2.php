@@ -32,10 +32,10 @@ echo "<hr>";
 
 
 <style>
-  /* 這裡使用 universal selector 來選取所有的元素 */
-  * {
-    font-family: 'Courier New', Courier, monospace;
-  }
+/* 這裡使用 universal selector 來選取所有的元素 */
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
 </style>
 <h2>正三角形</h2>
 <?php
@@ -157,4 +157,21 @@ for ($i = 0; $i < 9; $i++) {
   echo "<br>";
 }
 echo "<hr>";
+?>
+
+<h2>矩形</h2>
+<?php
+for ($i = 0; $i < 7; $i++) {
+  for ($j = 0; $j < 7; $j++) {
+    if ($i === 0 || $i === 6) {
+      echo "*";
+    } else if ($j === 0 || $j === 6) {
+      echo "*";
+    } else {
+      // 這裡要注意不能使用 " "，只會顯示一個空白而已
+      echo "&nbsp;";
+    }
+  }
+  echo "<br>";
+}
 ?>
