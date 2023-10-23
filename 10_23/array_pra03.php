@@ -8,7 +8,7 @@
 
 <?php
 $area1 = [];
-while (count($area1) < 7) {
+while (count($area1) < 6) {
   $temp = rand(1, 38);
   if (!in_array($temp, $area1))
     $area1[] = $temp;
@@ -21,6 +21,7 @@ foreach ($area1 as $value) {
 
 
 ?>
+
 
 <!-- <table>
   <tr>

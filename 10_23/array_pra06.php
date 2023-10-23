@@ -8,7 +8,17 @@ print_r($a);
 echo "</pre>";
 
 // 自己做出反轉陣列的效果
-for ($i = 0; $i < floor(count($a) / 2); $i++) {
+// for ($i = 0; $i < floor(count($a) / 2); $i++) {
+//   $tmp = $a[$i];
+//   $a[$i] = $a[count($a) - 1 - $i];
+//   $a[count($a) - 1 - $i] = $tmp;
+// }
+
+// echo "<pre>";
+// print_r($a);
+// echo "</pre>";
+
+for ($i=0; $i < floor(count($a) / 2); $i++) { 
   $tmp = $a[$i];
   $a[$i] = $a[count($a) - 1 - $i];
   $a[count($a) - 1 - $i] = $tmp;
