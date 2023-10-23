@@ -1,15 +1,16 @@
 <h1>利用程式來產生陣列</h1>
 <style>
-table,
-td {
-  border: 3px solid black;
-  border-collapse: collapse;
-}
+  table {
+    /* border: 3px solid black; */
+    border-collapse: collapse;
+  }
 
-td {
-  width: 5%;
-  text-align: center;
-}
+  td {
+    border: 3px solid black;
+
+    width: 5%;
+    text-align: center;
+  }
 </style>
 <?php
 
