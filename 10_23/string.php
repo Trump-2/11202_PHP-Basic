@@ -6,8 +6,8 @@
 
 <?php
 echo "<br>";
-$s = "aaddw1123";
-$replacedstring = str_repeat("*", mb_strlen($s));
+$str = "aaddw1123";
+$replacedstring = str_repeat("*", mb_strlen($str));
 echo $replacedstring;
 
 ?>
@@ -34,9 +34,9 @@ echo "</pre>";
 將上例陣列重新組合成“this is a book”
 
 <?php
-    echo "<br>";
-    echo join(" ", $a);
-    ?>
+echo "<br>";
+echo join(" ", $a);
+?>
 <h2>
 
   子字串取用
@@ -45,17 +45,17 @@ echo "</pre>";
 將” The reason why a great man is great is that he resolves to be a great man”只取前十字成為” The reason…”
 
 <?php
-    echo "<br>";
-    $s = "The reason why a great man is great is that he resolves to be a great man";
-    echo mb_substr($s, 0, 10) . "...";
-    echo "<br>";
-    $cs = "將上例陣列重新組合成";
-    echo substr($cs, 0, 4) . "...";
+echo "<br>";
+$str = "The reason why a great man is great is that he resolves to be a great man";
+$s = mb_substr($str, 0, 10);
+echo $s . "...";
+$cs = '將指定的關鍵字放大';
+echo "<br>";
+echo mb_substr($cs, 0, 7) . "...";
 
-    ?>
+?>
 
 <h2>
-
   尋找字串與HTML、css整合應用
 </h2>
 <ul>
@@ -65,13 +65,37 @@ echo "</pre>";
 </ul>
 
 <?php
-    $s = "學會PHP網頁程式設計，薪水會加倍，工作會好找程式設計";
-    // $targetIndex = mb_strpos($s, "程式設計");
-    // $targetLength = mb_strlen("程式設計");
+$s = "學會PHP網頁程式設計，薪水會加倍，工作會好找程式設計";
+$targetIndex = mb_strpos($s, "程式設計");
+// echo $targetIndex;
+$targetLength = mb_strlen("程式設計");
+// echo $targetLength;
+$sub = mb_substr($s, $targetIndex, $targetLength);
+echo str_replace($sub, "<span style='color:lightblue'>$sub</span>", $s, );
 
-    // $sub = mb_substr($s, $targetIndex, $targetLength);
-    $str = "程式設計";
-    echo str_replace($str, "<span style='font-size:20px; color:red'>$str</span>", $s);
+// $sub = mb_substr($s, $targetIndex, $targetLength);
+// $str = "程式設計";
+// echo str_replace($str, "<span style='color:lightblue'>$str</span>", $s);
 
 
-    ?>
+// echo str_replace($str, "<span style='font-size:20px; color:red'>$str</span>", $s);
+
+
+?>
+
+<?php
+$s = "在程式設計這程式設計段文程式設計章中，有重複出現多個「程式設計」的字串，如果只要讓第三個「程式設計」的字串變成紅色，該怎麼寫？";
+$n = 5;
+$str = "程式設計";
+$a = explode($str, $s);
+echo "<pre>";
+print_r($a);
+echo "</pre>";
+// echo $a[2];
+$a[$n - 1] = $a[$n - 1] . "<span style='color:red;'>";
+$a[$n] = "</span>" . $a[$n];
+echo "<pre>";
+print_r($a);
+echo "</pre>";
+echo join($str, $a);
+?>
