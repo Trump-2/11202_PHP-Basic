@@ -37,11 +37,12 @@ echo "<br>";
 ?>
 
 <style>
-  * {
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 0.5;
-  }
+* {
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 0.5;
+}
 </style>
+<h2>正三角形</h2>
 <?php
 for ($i = 0; $i < 5; $i++) {
   for ($j = 0; $j < (4 - $i); $j++) {
